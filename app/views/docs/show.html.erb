@@ -1,0 +1,12 @@
+<h1>Title</h1>
+<%= @doc.title %>
+<h3>content</h3>
+<p>
+    <%= @doc.content %>
+</p>
+<p>
+    <%= link_to "Edit", edit_doc_path(@doc)%>
+</p>
+<p>
+    <%= link_to 'Destroy', doc_path(@doc), data: {:confirm => 'Are you sure you want to delete?'}, :method => :delete %>
+</p>
