@@ -1,2 +1,2 @@
-module DocHelper
+module DocsHelper
 end
