@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>FileAmbry</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+</head>
 
-  <body>
-     <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-       
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">FileAmbry</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <% if user_signed_in?%>
+                <li class="active">
+                    <%= link_to "My docs", docs_path %>
+                </li>
+                <li>
+                    <%= link_to "Create Doc", new_doc_path%>
+                </li>
+                <li>
+                    <%= link_to "Signout", destroy_user_session_path, method: :delete%>
+                </li>
+                <%else %>
+                <li>
+                    <%= link_to "Login", new_user_session_path%>
+                </li>
+                 <li>
+                    <%= link_to "Signup", new_user_registration_path%>
+                </li>
+                <%end%>
+            </ul>
+        </div>
+    </nav>
+    <p class="notice">
+        <%= notice %>
+    </p>
+    <p class="alert">
+        <%= alert %>
+    </p>
     <%= yield %>
-  </body>
+</body>
+
 </html>
