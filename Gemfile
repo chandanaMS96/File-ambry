@@ -30,7 +30,6 @@ gem 'simple_form', '~> 4.1'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'rb-readline' 
 gem 'bootsnap'
-gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
 gem 'jquery-rails'

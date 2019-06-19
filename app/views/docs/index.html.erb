@@ -1,14 +1,15 @@
-<%= link_to '<button type="button">Create New Doc</button>'.html_safe, new_doc_path %>
-<% @docs.each do |doc| %>
-<h2>
-    <%= link_to doc.title, doc%>
-</h2>
-<p>
-    <%= truncate(doc.content, length:50) %>
-</p>
-<p>
-    <%= time_ago_in_words(doc.created_at) %>
-</p>
-<%= "--"*50 %>
-<%end%>
-
+<div class="container" id="index">
+   <%= button_to "Create doc", new_doc_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn  btn_color ", :method => :get %>
+    <% @docs.each do |doc| %>
+    <h2>
+        <%= link_to doc.title, doc,:class=>"link_color"%>
+    </h2>
+    <p><strong>Glympse of content: &nbsp;</strong>
+        <%= truncate(doc.content, length:50) %>
+    </p>
+    <p><strong>Created date: &nbsp;</strong>
+        <%= time_ago_in_words(doc.created_at) %>
+    </p>
+    <%end%>
+</div>
