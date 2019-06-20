@@ -1,7 +1,18 @@
-<%= form_for @doc  do|f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-  <%= f.submit 'create' %>
+<div class ="container">
+  <%= form_for  @doc   do|f| %>
+  <div class="form-group">
+  <%= f.label :title, class: "control-label" %>
+  <%= f.text_field :title, class: "form-control", :style=>"width:270px;"  %>
+</div>
+ <div class="form-group">
+  <%= f.label :content, class: "control-label" %>
+  <%= f.text_area :content, class: "form-control", :style=>"width:370px;" %>
+  </div>
+  <div class="form-group">
+  <%= f.submit 'Create', :class => "btn btn-info" %>
+</div>
 <%end%>
+</div>
+
+
+ 

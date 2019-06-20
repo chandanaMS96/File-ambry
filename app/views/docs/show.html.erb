@@ -1,12 +1,14 @@
-<h1>Title</h1>
-<%= @doc.title %>
-<h3>content</h3>
-<p>
-    <%= @doc.content %>
-</p>
-<p>
-    <%= link_to "Edit", edit_doc_path(@doc)%>
-</p>
-<p>
-    <%= link_to 'Destroy', doc_path(@doc), data: {:confirm => 'Are you sure you want to delete?'}, :method => :delete %>
-</p>
+<div class ="container">
+<p><strong> content: &nbsp;</strong>
+        <%= @doc.title %>
+    </p>
+<p><strong>Glympse of content: &nbsp;</strong>
+        <%= @doc.content %>
+    </p>
+    <br>
+    <div class="row">
+    <div class="col-sm-1"><%= link_to "Edit", edit_doc_path(@doc), :class=> "btn btn-info"%></div>
+
+    <div class="col-sm-6"><%= link_to 'Destroy', doc_path(@doc), data: {:confirm => 'Are you sure you want to delete?'}, :method => :delete, :class=> "btn btn-info" %></div>
+</div>
+</div>

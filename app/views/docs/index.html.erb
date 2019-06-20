@@ -1,3 +1,4 @@
+
 <div class="container" id="index">
    <%= button_to "Create doc", new_doc_path, :id => "open-contacts-dialog-btn",
       :class => "inbox-sf-add-btn  btn_color ", :method => :get %>
@@ -13,3 +14,4 @@
     </p>
     <%end%>
 </div>
+<div class = "container page_container"><%= will_paginate @docs, :previous_label => '<<', :next_label => '>>', :class=>"my_pagination" %></div>

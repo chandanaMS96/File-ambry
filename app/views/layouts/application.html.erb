@@ -21,13 +21,13 @@
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-info">
+    <nav class="navbar navbar-expand-md navbar-dark bg-info navbar-fixed-top" role="navigation">
         <a href="#" class="navbar-brand">FileAmbry</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class=" navbar-nav justify-content-center">
+        <div class="collapse navbar-collapse justify-content-end  " id="navbarCollapse" style="margin-right: 20px;">
+            <ul class=" navbar-nav   ">
                 <% if user_signed_in?%>
                 <li class="active nav-item">
                     <%= link_to "My docs", docs_path, :class => "nav-link" %>
@@ -44,6 +44,15 @@
                 </li>
                 <li class="nav-item">
                     <%= link_to "Signup", new_user_registration_path, :class => "nav-link"%>
+                </li>
+                 <li class="nav-item dropdown ">
+                    <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Welcome Page</a>
+                    <div class="dropdown-menu bg-info">
+                        <a href="#" class="dropdown-item">About</a>
+                        <a href="#" class="dropdown-item">Sevices</a>
+                        <a href="#" class="dropdown-item">Testimony</a>
+                         <a href="#" class="dropdown-item">Contact</a>
+                    </div>
                 </li>
                 <%end%>
             </ul>

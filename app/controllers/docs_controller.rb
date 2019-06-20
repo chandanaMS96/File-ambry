@@ -3,7 +3,7 @@ class DocsController < ApplicationController
 
 
   def index
-    @docs = Doc.where(user_id: current_user)
+    @docs = Doc.where(user_id: current_user).paginate(page: params[:page], per_page: 4)
   end
 
   def new
