@@ -15,3 +15,16 @@
 //= require turbolinks
 //= require_tree .
 
+
+
+
+
+function copyContact(element) {
+  var $temp = $("<input>");
+  console.log($temp)
+  $("body").append($temp);
+   $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  alert("number copied to your clipboard");
+  $temp.remove();
+}

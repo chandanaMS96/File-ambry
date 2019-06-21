@@ -1,4 +1,4 @@
-#index{
+
   .btn_color{
 background-color: #17a2b8;
   border-radius: 18px;
@@ -6,7 +6,7 @@ background-color: #17a2b8;
   float: right;
   margin-top: -30px; 
 color: white;}
-}
+
 
 .link_color{
   color:#007bff;
@@ -27,3 +27,10 @@ color: white;}
 text-decoration: none;
   }
 
+.indexPage{
+  width: 45vw;
+  flex: none;
+  background-color: lightgray;
+  border-radius: 20px;
+   padding-left: 60px;
+}

@@ -7,6 +7,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'logo.jpeg' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
@@ -23,7 +24,7 @@
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-info navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-md navbar-dark bg-info justify-content-center fixed-top" role="navigation">
         <%= link_to "FileAmbry", welcome_index_path, :class=>"navbar-brand ml-1"%>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -50,10 +51,9 @@
                  <li class="nav-item dropdown ">
                     <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Welcome Page</a>
                     <div id="color_text" class="dropdown-menu bg-info">
-                        <a href="#" class="dropdown-item" >About</a>
-                        <a href="#" class="dropdown-item">Sevices</a>
-                        <a href="#" class="dropdown-item">Testimony</a>
-                         <a href="#" class="dropdown-item">Contact</a>
+                        <a href="#About" class="dropdown-item" >About</a>
+                        <a href="#Testimony" class="dropdown-item">Testimony</a>
+                         <a href="#Contact" class="dropdown-item">Contact</a>
                     </div>
                 </li>
                 <%end%>
@@ -70,13 +70,15 @@
     <%= yield %>
 
 <!-- Footer -->
-<footer class="page-footer  justify-content-sm-end pt-3 ">
+<footer id="Contact"class="page-footer  pt-3" style="color:white">
 <div class="row text-center">
     <div class="col-sm-4 ">
-        <strong style =" font-size: 2vw;">Contact us</strong>
+<button id= "btn-radius"class = "btn-sm btn-default" onclick="copyContact('#p1')" style =" font-size: 1vw;" >Click to copy</button>
+<span style =" font-size: 1vw;" >&nbsp;contact us @ &nbsp;</span>
+<span id="p1" style =" font-size: 1vw;">99988786786</span>
     </div>
     <div class="col-sm-8">
-
+<span style = "color:black;"><small><sup>*</sup>links wont work</small></span>
           <!-- Facebook -->
           <a class="fb-ic">
             <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>

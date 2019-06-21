@@ -18,7 +18,6 @@ footer {
    left:0px;
    bottom:0px;
    height:auto;
-   padding:6px;
    width:100%;
    background:#17a2b8;
 }
@@ -30,3 +29,9 @@ footer {
 #color_text a:hover {
 color:black;
   }
+
+
+#btn-radius{
+  border-radius: 20px;
+  margin-bottom: 8px;
+} 

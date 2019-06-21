@@ -1,9 +1,11 @@
 
-<div class="container" id="index">
-   <%= button_to "Create doc", new_doc_path, :id => "open-contacts-dialog-btn",
+
+   <%= button_to "Create doc", new_doc_path,
       :class => "inbox-sf-add-btn  btn_color ", :method => :get %>
+      <div class="container">
     <% @docs.each do |doc| %>
-    <h2>
+    <div class = "indexPage ">
+        <h2>
         <%= link_to doc.title, doc,:class=>"link_color"%>
     </h2>
     <p><strong>Glympse of content: &nbsp;</strong>
@@ -12,6 +14,8 @@
     <p><strong>Created date: &nbsp;</strong>
         <%= time_ago_in_words(doc.created_at) %>
     </p>
+    </div>
+    
     <%end%>
 </div>
 <div class = "container page_container"><%= will_paginate @docs, :previous_label => '<<', :next_label => '>>', :class=>"my_pagination" %></div>
