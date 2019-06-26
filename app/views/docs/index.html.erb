@@ -1,5 +1,17 @@
-
+<style >
+    .align_center{
+    margin-top: 150px;
+  padding-left:40%;
+}
+</style>
+<% if @docs.count == 0 %>
+<div class="align_center">
+<h2>&nbsp; &nbsp;&nbsp;Get started</h2>
+<%= link_to "Create your first document", new_doc_path, :class => "btn btn-info",:style =>"border-radius:20px;"%>
+</div>
+<%end%>
       <div class="container">
+<br>
     <% @docs.each do |doc| %>
     <div class = "indexPage ">
         <h2>
