@@ -1,76 +1,74 @@
-
-    <div class="container">
-        <div class="row m-4" id ="About">
-            <div class="col-sm-6">
-                <img src="/assets/background.jpg" width="100%">
-            </div>
-            <div class="col-sm-6 intro">
-                <h1>What is FileAmbry</h1>
-                <p>A file is an object on a computer that stores data, information, settings, or commands used with a computer program. In a GUI (graphical user interface), such as Microsoft Windows, files display as icons that relate to the program that opens the file. For example, the picture is an icon associated with Adobe Acrobat PDF files. If this file was on your computer, double-clicking the icon in Windows would open that file in Adobe Acrobat or the PDF reader installed on the computer.</p>
-            </div>
+<div class="container">
+    <div class="row m-4" id="About">
+        <div class="col-sm-6">
+            <img src="/assets/background.jpg" width="100%">
         </div>
-        <div id = "box" class="text-center">
-            <%= link_to "Get started", new_user_registration_path, :class => "nav-link ", :class=>"btn btn-success" , :id => "getStarted"%>
-          <h1>Sign up and enjoy our product!!</h1>
+        <div class="col-sm-6 intro">
+            <h1>What is FileAmbry</h1>
+            <p>A file is an object on a computer that stores data, information, settings, or commands used with a computer program. In a GUI (graphical user interface), such as Microsoft Windows, files display as icons that relate to the program that opens the file. For example, the picture is an icon associated with Adobe Acrobat PDF files. If this file was on your computer, double-clicking the icon in Windows would open that file in Adobe Acrobat or the PDF reader installed on the computer.</p>
         </div>
-        
-        <br>
-        <br>
-        <!-- card section -->
-        <div class="row" id="Testimony">
-            <div class="col-sm-3">
-                <div class="card">
-                    <img class="card-img-top" src="/assets/card1.jpeg">
-                    <div class="card-body">
-                       <p class="card-text">Positive feedback is a process in which the end products of an action cause more of that action to occur in a feedback loop
-                        <span id="dots1">...</span><span id="more1" style = "display:none">
-                        erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum</span></p>
-                         <button class="btn btn-success btn-block" onclick="changeText(this)" id="myBtn1" type="button">
-                           Read more
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img class="card-img-top" src="/assets/card2.jpeg">
-                    <div class="card-body">
-                        <p class="card-text">Positive feedback is a process in which the end products of an action cause more of that action to occur in a feedback loop
-                        <span id="dots2">...</span><span id="more2" style = "display:none">
-                        erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue </span></p>
-                         <button class="btn btn-success btn-block" onclick="changeText(this)" id="myBtn2" type="button">
-                           Read more
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img class="card-img-top" src="/assets/card3.jpeg">
-                    <div class="card-body">
-                        <p class="card-text">Positive feedback is a process in which the end products of an action cause more of that action to occur in a feedback loop
-                        <span id="dots3">...</span><span id="more3" style = "display:none">
-                        erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, a</span></p>
-                         <button class="btn btn-success btn-block" onclick="changeText(this)" id="myBtn3" type="button">
-                           Read more
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img class="card-img-top" src="/assets/card4.jpeg">
-                    <div class="card-body">
-                        <p class="card-text">Positive feedback is a process in which the end products of an action cause more of that action to occur in a feedback loop
-                        <span id="dots4">...</span><span id="more4" style = "display:none">
-                        erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctu</span></p>
-                         <button class="btn btn-success btn-block" onclick="changeText(this)" id="myBtn4" type="button">
-                           Read more
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
     </div>
+    <div id="box" class="text-center">
+        <%= link_to "Get started", new_user_registration_path, :class => "nav-link ", :class=>"btn btn-success" , :id => "getStarted"%>
+        <h1>Sign up and enjoy our product!!</h1>
+    </div>
+    <br>
+    <br>
+    <!-- card section -->
+    <div class="row" id="Testimony">
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="/assets/card1.jpeg">
+                <div class="card-body">
+                    <p class="card-text">Positive feedback is a process in which the end products of an action cause more of that action to occur in a feedback loop
+                        <span id="dots1">...</span><span id="more1" style="display:none">
+                            erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum</span></p>
+                    <button class="btn btn-success btn-block" onclick="changeText(this)" id="myBtn1" type="button">
+                        Read more
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="/assets/card2.jpeg">
+                <div class="card-body">
+                    <p class="card-text">Positive feedback is a process in which the end products of an action cause more of that action to occur in a feedback loop
+                        <span id="dots2">...</span><span id="more2" style="display:none">
+                            erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue </span></p>
+                    <button class="btn btn-success btn-block" onclick="changeText(this)" id="myBtn2" type="button">
+                        Read more
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="/assets/card3.jpeg">
+                <div class="card-body">
+                    <p class="card-text">Positive feedback is a process in which the end products of an action cause more of that action to occur in a feedback loop
+                        <span id="dots3">...</span><span id="more3" style="display:none">
+                            erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, a</span></p>
+                    <button class="btn btn-success btn-block" onclick="changeText(this)" id="myBtn3" type="button">
+                        Read more
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="/assets/card4.jpeg">
+                <div class="card-body">
+                    <p class="card-text">Positive feedback is a process in which the end products of an action cause more of that action to occur in a feedback loop
+                        <span id="dots4">...</span><span id="more4" style="display:none">
+                            erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctu</span></p>
+                    <button class="btn btn-success btn-block" onclick="changeText(this)" id="myBtn4" type="button">
+                        Read more
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
