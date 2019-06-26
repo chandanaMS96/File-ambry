@@ -25,6 +25,8 @@ function copyContact(element) {
   $("body").append($temp);
    $temp.val($(element).text()).select();
   document.execCommand("copy");
-  alert("number copied to your clipboard");
+ $("#copyContactModal").modal()
   $temp.remove();
+
+
 }
