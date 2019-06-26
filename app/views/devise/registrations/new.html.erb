@@ -1,4 +1,9 @@
-<div class ="container">
+<style >
+    .align_center{
+  padding-left:32%;
+}
+</style>
+<div class ="container align_center">
 <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -21,5 +26,6 @@
 
     <%= f.button :submit, "Sign up", :class=>"btn btn-info" %>
 <% end %>
-</div>
+
 <%= render "devise/shared/links" %>
+</div>

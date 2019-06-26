@@ -1,5 +1,11 @@
-
-<h2>Sign up</h2>
+<style> 
+#align_center{
+  float: right;
+  color:red;
+}
+</style>
+<div id = "align_center" class= "container">
+<h5 style="color: red;">Sign up</h5>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -24,3 +30,4 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>

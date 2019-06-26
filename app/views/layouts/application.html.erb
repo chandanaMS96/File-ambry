@@ -35,11 +35,15 @@
                 <li class="active nav-item">
                     <%= link_to "My docs", docs_path, :class => "nav-link" %>
                 </li>
+
                 <li class="nav-item">
                     <%= link_to "Create Doc", new_doc_path, :class => "nav-link"%>
                 </li>
                 <li class="nav-item">
                     <%= link_to "Signout", destroy_user_session_path, :class => "nav-link", method: :delete%>
+                </li>
+                 <li class="nav-item">
+                    <%= link_to "Edit Profile", edit_user_registration_path, :class => "nav-link" %>
                 </li>
                 <%else %>
                 <li class="nav-item">
