@@ -4,11 +4,11 @@
   padding-left:40%;
 }
 .button5{
-    width: 50px;
+    width: auto;
     border-radius: 50%;
     float: right;
-    margin-top: 350px;
-    margin-right: 50px;
+    margin-top: 370px;
+    margin-right: 120px;
 }
 
 .dropdown-menu{
@@ -18,9 +18,9 @@
 }
 
 .drop_button{
-    width:50px; 
+    width:auto; 
     margin:3px;
-    border-radius: 50%
+    border-radius: 50%;
 }
 .drop_button_color{
    color: white;
@@ -52,16 +52,16 @@ h5{
           <span class=" fa fa-plus"></span> 
         </button>
 <ul class="dropdown-menu  dropdown-menu-left">
-          <li class = "dropdown-item"><button class = " drop_button btn btn-success"><%= link_to '<i class="fa fa-file-alt drop_button_color "></i>'.html_safe,textnote_path%></button></li>
+          <li class = "dropdown-item"><button class = " drop_button btn btn-success"><%= link_to '<i class="fa fa-file-alt drop_button_color "></i>'.html_safe,textnote_path%></button>&nbsp;textnote</li>
 
-           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa fa-clock drop_button_color "></i>'.html_safe,remainder_path%></button></li>
+           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa fa-clock drop_button_color "></i>'.html_safe,remainder_path%></button>&nbsp;remainder</li>
      
-           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa-microphone drop_button_color "></i>'.html_safe,audio_path%></button></li>
+           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa-microphone drop_button_color "></i>'.html_safe,audio_path%></button>&nbsp;audio</li>
       
-           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa-paperclip drop_button_color "></i>'.html_safe,attachment_path%></button></li>
+           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa-paperclip drop_button_color "></i>'.html_safe,attachment_path%></button>&nbsp;attachment</li>
 
-           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa-camera drop_button_color "></i>'.html_safe, camera_path%></button></li>
-           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa-pen drop_button_color "></i>'.html_safe, handwriting_path%></button></li>
+           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa-camera drop_button_color "></i>'.html_safe, camera_path%></button>&nbsp;camera</li>
+           <li class = "dropdown-item"><button class = "drop_button btn btn-success"><%= link_to '<i class="fa fa-pen drop_button_color "></i>'.html_safe, handwriting_path%></button>&nbsp;handwriting</li>
   </ul>  
 </div>
 

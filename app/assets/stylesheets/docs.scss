@@ -46,6 +46,35 @@ text-decoration: none;
 
 
 
+/* skin.css Style*/
+.upload-drop-zone {
+  height: 200px;
+  color: #ccc;
+  margin-left: 30vw;
 
+  border-style: dashed;
+  border-color: #ccc;
+  text-align: center;
+  width: 500px;
+  input{
+    padding: 80px 0px 0px 150px;
+  }
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
 
+.upload-drop-zone{
+  margin-top: 200px;
+}
 
+#dropBox{
+margin-top: 10px;
+margin-left: 30vw;
+line-height: 20px;
+}
+
+li{
+  margin-bottom: 15px;
+}
