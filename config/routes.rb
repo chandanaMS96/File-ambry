@@ -9,5 +9,18 @@ Rails.application.routes.draw do
     
   end
   root 'welcome#index'
+
+
+get '/textnote', to: 'docs#textnote'
+
+get '/remainder', to: 'docs#remainder'
+
+get '/audio', to: 'docs#audio'
+
+get '/attachment', to: 'docs#attachment'
+
+get '/handwriting', to: 'docs#handwriting'
+
+get '/camera', to: 'docs#camera'
   
 end

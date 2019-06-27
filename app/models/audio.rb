@@ -1,0 +1,2 @@
+class Audio < Doc
+end

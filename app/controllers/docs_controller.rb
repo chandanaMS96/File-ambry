@@ -41,6 +41,24 @@ class DocsController < ApplicationController
   def show
   end
 
+  def textnote
+  end
+
+  def remainder
+  end
+  
+  def audio
+  end
+
+  def attachment
+  end
+
+  def handwriting
+  end
+
+  def camera
+  end
+
   private
 
   def doc_params

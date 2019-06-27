@@ -1,0 +1,2 @@
+class Handwriting < ApplicationRecord
+end

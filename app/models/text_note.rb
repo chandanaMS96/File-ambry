@@ -1,0 +1,2 @@
+class TextNote < Doc
+end
