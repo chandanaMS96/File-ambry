@@ -46,3 +46,9 @@ $(document).on('ready', function() {
      progressBar.attr('value', value);
   });
 });
+
+
+function goBack() {
+  window.location.assign("http://localhost:3000/docs")
+  window.history.back();
+}

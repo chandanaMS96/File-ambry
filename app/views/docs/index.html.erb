@@ -1,19 +1,20 @@
 <style >
     .align_center{
-    margin-top: 150px;
+    margin-top: 250px;
   padding-left:40%;
 }
 .button5{
     width: 50px;
     border-radius: 50%;
     float: right;
-    margin-top: 500px;
+    margin-top: 350px;
     margin-right: 50px;
 }
 
 .dropdown-menu{
     border: none;
     padding: 0rem !important;
+    background-color:transparent !important; 
 }
 
 .drop_button{
@@ -27,9 +28,16 @@
 .dropdown-item{
     margin-bottom:  8px;
     padding-left:60px;
+    width:auto;
+}
+.dropdown-item:hover{
+    background: transparent;
 }
 
+h5{
+    padding-left: 80px;
 }
+
 
 </style>
 
@@ -40,7 +48,7 @@
 <p> click on plus icon to create document</p>
 </div>
 <div class ="dropup">
-<button type="button" class="btn btn-success button5 " data-toggle="dropdown" >
+<button type="button" class="btn btn-success button5 " data-toggle="dropdown" onclick="change_background()" >
           <span class=" fa fa-plus"></span> 
         </button>
 <ul class="dropdown-menu  dropdown-menu-left">
