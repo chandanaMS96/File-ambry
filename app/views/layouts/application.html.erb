@@ -22,7 +22,6 @@
 </head>
 
 </style>
-
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-info justify-content-center fixed-top" role="navigation">
         <%= link_to "FileAmbry", welcome_index_path, :class=>"navbar-brand ml-1"%>
@@ -43,7 +42,7 @@
                     <%= link_to "Signout", destroy_user_session_path, :class => "nav-link", method: :delete%>
                 </li>
                  <li class="nav-item">
-                     <%= link_to '<i class="fa fa-user-edit "></i>'.html_safe,edit_user_registration_path, :style=>"padding-left:5px;",:class => "nav-link"%>
+                     <%= link_to '<i class="fa fa-user-circle "></i>'.html_safe,edit_user_registration_path, :style=>"padding-left:5px;font-size: 20px;",:class => "nav-link"%>
                 </li>
                 <%else %>
                 <li class="nav-item">
@@ -64,7 +63,7 @@
             </ul>
         </div>
     </nav>
-<progress value="0" class="progress-bar-striped  bg-danger" style = "width:100%;height:4px;position: fixed; z-index: 1;margin-top: 55px;"></progress>
+
     <p class="notice">
         <%= notice %>
     </p>
