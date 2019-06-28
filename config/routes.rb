@@ -22,5 +22,8 @@ get '/attachment', to: 'docs#attachment'
 get '/handwriting', to: 'docs#handwriting'
 
 get '/camera', to: 'docs#camera'
+post '/save_image', to: 'docs#save_image'
+
+get '/get_image', to: 'docs#get_image'
   
 end

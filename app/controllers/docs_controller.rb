@@ -1,4 +1,6 @@
 class DocsController < ApplicationController
+
+  protect_from_forgery except: [:save_image]
   before_action :find_doc, only: [:edit,:update,:destroy,:show]
 
 
@@ -50,7 +52,27 @@ class DocsController < ApplicationController
   def audio
   end
 
+def save_image
+  unless params[:file].nil? && params[:name].nil?
+    file =  params[:file]
+   image_uploaded = current_user.images.attach(io: File.open(file.path,'r'), filename: params[:name] )
+ end
+end
+
+
+def get_image
+ polymorphic_url = []
+ unless  current_user.images.nil?
+  images =  current_user.images
+  images.each do |img|
+    polymorphic_url << polymorphic_url(img)
+  end
+end
+render :json => {result: polymorphic_url}
+end
+
   def attachment
+   
   end
 
   def handwriting
@@ -62,7 +84,7 @@ class DocsController < ApplicationController
   private
 
   def doc_params
-    params.require(:doc).permit(:title, :content)
+    params.require(:doc).permit(:title, :content, images:[])
   end
 
   def find_doc
