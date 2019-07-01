@@ -1,34 +1,15 @@
-<!-- <div class="container">    
-            <div class="upload-drop-zone" id="drop-zone">
-                <input type="file" id="myFile" onchange ="attachmentFile()">
-        </div>
-        <div id ="dropBox">
-          <p id ="dropBoxHeading"> Select one or more files<p>
 
-         <ol id= "list">
-          </ol></div>
-</div> -->
-
-<!-- <div class="container" >
-
-  <fieldset>
-    <legend>Upload photo</legend>
-    <input type="file" name="file" id="photo">
-    <input type="submit" value="Upload" onclick="attachmentFile()" >
-  </fieldset>
-
-</div> -->
+   <button class = "btn-info btn" id = "MyAttach" ><%= link_to 'attachments' ,my_attachments_path%></button>
+    <div id="drop-area" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);>
+  <form class=" my-form">
+        <p>Upload  files with the file dialog or by drag and drop</p>
+        <input type="file" id="photo" onchange="attachmentFile(this.files)">
+        </form>
+    </div>
+    <div id="dropBox">
+        <p id="dropBoxHeading"> Select one or more files</p>
+        <ol id="list">
+        </ol>
+    </div>
 
 
-
-<div class="container" style = "margin-top: 50px;"> 
- <legend>Upload photo</legend>   
-            <div class="upload-drop-zone" id="drop-zone">
-                <input type="file" id="photo" onchange ="attachmentFile()">
-        </div>
-        <div id ="dropBox">
-          <p id ="dropBoxHeading"> Select one or more files<p>
-
-         <ol id= "list">
-          </ol></div>
-</div>

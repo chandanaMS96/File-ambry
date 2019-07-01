@@ -52,43 +52,63 @@ class DocsController < ApplicationController
   def audio
   end
 
-def save_image
-  unless params[:file].nil? && params[:name].nil?
-    file =  params[:file]
-   image_uploaded = current_user.images.attach(io: File.open(file.path,'r'), filename: params[:name] )
- end
+  def save_image
+    unless params[:file].nil? && params[:name].nil?
+      file =  params[:file]
+      same_images =  current_user.images.select { |img| img.blob[:filename] == params[:name] }
+      if same_images.blank?
+       image_uploaded = current_user.images.attach(io: File.open(file.path,'r'), filename: params[:name] )
+     else
+      render :json=> {result: "image already exists"}
+    end
+  end
 end
 
 
 def get_image
- polymorphic_url = []
- unless  current_user.images.nil?
-  images =  current_user.images
-  images.each do |img|
+  filename = request.headers['file-name']
+  polymorphic_url = []
+  unless  current_user.images.nil?
+    images =  current_user.images
+    images.each do |img|
+      if img.blob[:filename] == filename
+        polymorphic_url << polymorphic_url(img)
+      end
+    end
+  end
+  render :json => {results: polymorphic_url}
+end
+
+def my_attachments_data
+  polymorphic_url = []
+  current_user.images.each do |img|
     polymorphic_url << polymorphic_url(img)
   end
+   render :json => {results: polymorphic_url}
 end
-render :json => {result: polymorphic_url}
+
+
+def attachment
+ 
 end
 
-  def attachment
-   
-  end
+def handwriting
+end
 
-  def handwriting
-  end
+def camera
+end
 
-  def camera
-  end
 
-  private
 
-  def doc_params
-    params.require(:doc).permit(:title, :content, images:[])
-  end
 
-  def find_doc
-    @doc = Doc.find(params[:id])
-  end
+private
+
+def doc_params
+  params.require(:doc).permit(:title, :content, images:[])
+end
+
+def find_doc
+  @doc = Doc.find(params[:id])
+end
 
 end

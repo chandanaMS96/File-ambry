@@ -11,19 +11,19 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
 
-get '/textnote', to: 'docs#textnote'
+controller :docs do
+get '/textnote' => :textnote
+ get '/remainder' => :remainder
+get '/audio' => :audio
+get '/attachment'  => :attachment
+get '/handwriting' => :handwriting
+get '/camera' => :camera
+post '/save_image' => :save_image
+get '/get_image' => :get_image
+get '/my_attachments_data' => :my_attachments_data
+get '/my_attachments' => :my_attachments
+end
 
-get '/remainder', to: 'docs#remainder'
 
-get '/audio', to: 'docs#audio'
-
-get '/attachment', to: 'docs#attachment'
-
-get '/handwriting', to: 'docs#handwriting'
-
-get '/camera', to: 'docs#camera'
-post '/save_image', to: 'docs#save_image'
-
-get '/get_image', to: 'docs#get_image'
   
 end
