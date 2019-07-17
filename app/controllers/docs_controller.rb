@@ -82,7 +82,12 @@ end
 def my_attachments_data
   polymorphic_url = []
   current_user.images.each do |img|
-    polymorphic_url << polymorphic_url(img)
+    data = {
+      url: polymorphic_url(img),
+      name: img.blob[:filename],
+      extension: File.extname(img.blob[:filename])
+    }
+    polymorphic_url << data 
   end
    render :json => {results: polymorphic_url}
 end

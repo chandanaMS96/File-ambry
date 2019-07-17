@@ -1,4 +1,166 @@
-handwriting
+<style >
+  .container{
+    border:1px solid black;
+    padding: 30px;
+    width:900px;
+  }
 
-<button onclick="goBack()">Go Back</button>
 
+#hp-logo{
+  float: left;
+  margin-right: 20px;
+  height:24px;
+  width:26px; 
+}
+
+
+
+
+#small-text{
+  margin-left: 45px;
+  font-size: 10px;
+}
+
+.text-font-size{
+font-size:13px;
+}
+
+.heading-text{
+margin-top:  30px;
+margin-bottom: 20px;
+}
+
+.heading-text-font{
+  font-weight: 500;
+  font-size: 16px;
+}
+
+li{
+  line-height: 8px;
+}
+
+ol{
+  margin-bottom: 30px;
+}
+#hp{
+  width: 140px;
+  height: 50px;
+  float: left;
+  margin-right: 20px;
+
+}
+
+#printer-name{
+  font-weight: 600;
+font-size: 13px;
+margin-bottom: 2px;
+
+}
+
+
+br{
+  margin-bottom: 2px;
+}
+
+pre{
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+
+
+.play-store{
+height: 30px ;
+width:120px; 
+}
+
+#play-store-container{
+text-align: center;
+margin-bottom: 40px;
+}
+a{
+  margin-bottom: 10px;
+}
+#gap{
+  margin-bottom: 10px;
+}
+
+#blue-color{
+  color:#00BFFF
+}
+.align-center{
+  text-align: center;
+ line-height: 30px;
+}
+
+#spacing{
+word-spacing: 30px;
+}
+
+#gray-color{
+  color:#808080;
+}
+
+hr{
+border: none;
+    height: 2px;
+    background-color: #DCDCDC ; 
+
+}
+</style>
+
+<div class = "container">
+
+    <img src="assets/logo.jpeg" id ="hp-logo" >
+    <span>HP PrintOS Service Centre<p id = "small-text">New Site Preparation</p> </span>
+
+  <hr/>
+
+
+
+    <p class = "text-font-size">Hello<%= %>  ,</p>
+    <p class = "text-font-size">It's  important to prepare your customer site for the printer arrival .A properly prepared site ensures a smooth and very easy installation. The site preparation guide checklist has been sent to the customer and must be completed a minimum of two weeks before the installation</p>
+    <p class="heading-text heading-text-font"> Here's how to complete Site Preparation process</p>
+    <ol class = "text-font-size">
+      <li>Review the <%= link_to "site preparation guide checklist." %></li>
+      <li>Make sure you have Service Center mobile app, there's a link to download below.</li>
+      <li>Arrange onsite visit to make sure the site is ready.</li>
+      <li>Complete site preparation report on Service Center app.</li>
+    </ol>
+
+    <p class="heading-text heading-text-font">Printer Information</p>
+
+     <img src="assets/logo.jpeg" id ="hp" >
+   <pre class="text-font-size">
+    <span id = "printer-name">name:<%= %></span>
+    Product number:<%= %>
+    Site: <%= %></pre>
+    <p class="heading-text heading-text-font">Service Center mobile app </p>
+     <p class = "text-font-size">To do site preparation you will need a service center mobile app. ypu can download HP PrintOS Service Center mobile app.</p>
+
+<div id="play-store-container">
+    <a href="">
+        <div id="gap">
+            <img src="assets/logo.jpeg" class="play-store">
+        </div>
+    </a>
+    <a href="">
+        <div>
+            <img src="assets/logo.jpeg" class="play-store">
+        </div>
+    </a>
+</div>
+ <div class = "text-font-size">
+   Enjoy,<br>
+   The Hp <span id="blue-color">PrintOS</span> Team
+ </div>
+
+
+  <hr>
+  <div class = "text-font-size align-center">
+    Update your preferences to choose the type of emails you recieve.<br>
+    <span id="spacing">HP.com Contact  HP  privacy </span> Personal Data Rights Notice<br>
+<span id="gray-color">&copy;CopyRight 2018 HP Development Company,L.P.</span>
+
+  </div>
+
+</div>
